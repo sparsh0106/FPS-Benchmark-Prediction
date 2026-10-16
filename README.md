@@ -1,46 +1,20 @@
+# FPS Prediction from Hardware Specifications
 
-# 🎮 FPS Prediction Using CPU-GPU Specs and Game Settings
+A Jupyter notebook for exploring game performance data and predicting frames per second from CPU, GPU, and game-setting features. The notebook cleans the tabular data, engineers hardware features, and compares regression models.
 
-This repository contains a machine learning project that predicts the **Frames Per Second (FPS)** performance of various games based on a system's CPU, GPU, and game configuration. The model leverages hardware specs and setting information to forecast gaming performance, useful for gamers, system builders, and hardware reviewers.
+## Dataset
 
-Dataset link - [FPS Benchmark](https://www.kaggle.com/datasets/ulrikthygepedersen/fps-benchmark) - Uploaded by [Ulrik Thyge Pedersen](https://www.kaggle.com/ulrikthygepedersen)
+The notebook expects a file named `fps_benchmark.csv` in the repository root. Download the [FPS Benchmark dataset on Kaggle](https://www.kaggle.com/datasets/ulrikthygepedersen/fps-benchmark), review its license, and place the CSV at that path before running the notebook. The dataset is not included here.
 
----
-
-## 📌 Project Highlights
-
-- 🔍 **Data Preprocessing:** Cleaned and stripped byte-string artifacts, handled missing values, and converted categorical variables using one-hot encoding.
-- 🧠 **Feature Engineering:** Extracted CPU/GPU brands, dropped irrelevant or redundant columns, and normalized the FPS target variable.
-- 📊 **Exploratory Analysis:** Correlation analysis performed to find the most influential features on FPS.
-- ⚙️ **Modeling Techniques:**
-  - Linear Regression
-  - Random Forest Regressor
-  - XGBoost Regressor
-- 🧪 **Hyperparameter Tuning:** GridSearchCV used for optimal parameter selection.
-
----
-
-## 📁 Dataset
-
-The dataset (`fps_benchmark.csv`) contains system hardware specifications and corresponding FPS results across various games and settings.
-
-Features include:
-- `CpuBrand`, `GpuBrand`
-- GPU architecture, memory type, interface, DirectX/OpenGL/Vulkan support
-- Game titles and settings
-- CPU clock speeds and process size
-
----
-
-## 📦 Requirements
-
-Install the required libraries:
+## Run locally
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+git clone https://github.com/sparsh0106/FPS-Benchmark-Prediction.git
+cd FPS-Benchmark-Prediction
+python -m pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
+jupyter notebook main.ipynb
+```
 
----
+## Scope
 
-## 👤 Author
-
-**Sparsh Agarwal** — [GitHub](https://github.com/sparsh0106) · [LinkedIn](https://www.linkedin.com/in/sparsh-agarwal-4b443b304/)
+This is an educational benchmark on one dataset. Predictions are estimates for the data represented in the notebook and are not guaranteed FPS measurements for a particular computer.
