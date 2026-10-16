@@ -38,3 +38,9 @@ Install the required libraries:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+
+---
+
+## 👤 Author
+
+**Sparsh Agarwal** — [GitHub](https://github.com/sparsh0106) · [LinkedIn](https://www.linkedin.com/in/sparsh-agarwal-4b443b304/)
